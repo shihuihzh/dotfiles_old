@@ -1,0 +1,8 @@
+[user]
+	email = shihuihzh@qq.com
+	name = Zhanhao Wong
+[color]
+	ui = auto
+[http]
+[core]
+	autocrlf = input
