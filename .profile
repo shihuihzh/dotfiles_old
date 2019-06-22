@@ -30,6 +30,6 @@ export PATH=$PATH:$HOME/.scripts
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
-export TERMINAL=st
+export TERMINAL=alacritty
 ibus-daemon -x -d
 
