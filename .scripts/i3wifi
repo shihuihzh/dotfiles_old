@@ -8,19 +8,18 @@ INTERFACE="${BLOCK_INSTANCE:-wlan0}"
 
 [[ "$(cat /sys/class/net/$INTERFACE/operstate)" = 'down' ]] && echo 📡 && exit
 
-DBM=$(iwlist $INTERFACE scan | grep Signal | awk '{ split($3, s, "=");print s[2]}')
+SSID=`iwgetid -r`
+DBM=$(wpa_cli scan_results | grep "${SSID}" | awk '{print $3}')
 #QUALITY=$(grep $INTERFACE /proc/net/wireless | awk '{ print int($3 * 100 / 70) }')
 
 #echo 📶 $QUALITY%
-echo 📶$DBM
+#echo "<span color='red'>$DBM</span>"
 
 # color
-if [[ $DBM -ge -40 ]]; then
-    echo "#00FF00"
-elif [[ $DBM -lt -40 ]]; then
-    echo "#FFF600"
-elif [[ $DBM -lt -60 ]]; then
-    echo "#FFAE00"
-elif [[ $DBM -lt -80 ]]; then
-    echo "#FF0000"
+if [[ $DBM -ge -50 ]]; then
+    echo ""
+elif [[ $DBM -ge -80 ]]; then
+    echo ""
+else
+    echo ""
 fi

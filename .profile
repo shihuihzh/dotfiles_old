@@ -23,9 +23,8 @@ fi
 
 export M2_HOME=$HOME/DEV/Soft/apache-maven-3.5.3
 export GOPATH=$HOME/DEV/go
-export GOROOT=$HOME/DEV/Soft/go
 export JAVA_HOME=$HOME/DEV/Soft/Java/jdk1.8.0_152
-export PATH=$PATH:$GOROOT/bin:$JAVA_HOME/bin:$M2_HOME/bin
+export PATH=$PATH:$M2_HOME/bin
 export PATH=$PATH:$HOME/.scripts
 #export MOZ_GTK_TITLEBAR_DECORATION=system
 export GTK_IM_MODULE=ibus

@@ -7,6 +7,26 @@ case $BLOCK_BUTTON in
 	5) pamixer -d 5 ;;
 esac
 
-printpastatus() { [[ $(pamixer --get-mute) = "true" ]] && echo -n 🔇 && exit
-echo 🔊$(pamixer --get-volume)% ;}
+vol=$(pamixer --get-volume)
+
+iconget() {
+    if [[ $vol -ge 80 ]]; then
+            icon=""
+    elif [[ $NUM -ge 75 ]]; then
+            icon=""
+    elif [[ $NUM -ge 50 ]]; then
+        icon=""
+    elif [[ $NUM -ge 15 ]]; then
+            icon=""
+    ee
+            icon=""
+    fi ;}
+
+iconget
+
+printpastatus() {
+   [[ $(pamixer --get-mute) = "true" ]] && echo -n  && exit
+   
+   echo ${icon}${vol}% ;
+}
 printpastatus

@@ -19,10 +19,25 @@ else
 	color="#FF0000"
 fi ;}
 
+iconget() {
+if [[ $NUM -ge 100 ]]; then
+	icon=""
+elif [[ $NUM -ge 75 ]]; then
+	icon=""
+elif [[ $NUM -ge 50 ]]; then
+	icon=""
+elif [[ $NUM -ge 15 ]]; then
+	icon=""
+else
+	icon=""
+fi ;}
+
 if [[ $STATE == "Charging" ]]; then
 	 color="#ffffff"
 else
 	colorget
 fi
 
-echo "<span color='$color'>$(echo $STATE | sed -e "s/,//g;s/Discharging/🔋/;s/Charging/🔌/;s/Unknown/❓/;s/Full/⚡/;s/ 0*/ /g;s/ :/ /g")$(echo $NUM | sed -e 's/$/%/')</span>"
+iconget
+
+echo "<span color='$color'>$(echo $STATE | sed -e "s/,//g;s/Discharging/${icon}/;s/Charging//;s/Unknown//;s/Full//;s/ 0*/ /g;s/ :/ /g")$(echo $NUM | sed -e 's/$//')</span>"
