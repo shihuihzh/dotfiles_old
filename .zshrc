@@ -95,5 +95,5 @@ export EDITOR='vim'
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias szhanhao.xyz="ssh root@s.zhanhao.xyz -p 28981"
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-
+alias ra='ranger'
 
