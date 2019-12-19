@@ -31,5 +31,7 @@ export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
 export TERMINAL=alacritty
-ibus-daemon -x -d
+ibus-daemon -drx
 
+
+export PATH="$HOME/.cargo/bin:$PATH"

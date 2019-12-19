@@ -15,7 +15,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Hack Nerd Font 13
+font pango:DejaVu Sans Mono for Powerline
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -32,8 +32,8 @@ font pango:Hack Nerd Font 13
 floating_modifier $mod
 
 # start a terminal
-set $term --no-startup-id alacritty
-#set $term --no-startup-id st
+# set $term --no-startup-id alacritty
+set $term --no-startup-id st
 bindsym $mod+Return exec $term -e tmux
 bindsym $mod+u [instance="dropdown"] scratchpad show; [instance="dropdown"] move position center
 
@@ -99,7 +99,7 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 set $workspace1 ""
-set $workspace2 ""
+set $workspace2 ""
 set $workspace3 ""
 set $workspace4 ""
 set $workspace10 ""
@@ -185,7 +185,7 @@ assign [class="jetbrains-idea"] $workspace3
 assign [class="electronic-wechat"] $workspace4
 
 # color
-set $bg-color 	         #2f343f
+set $bg-color            #2f343f
 set $inactive-bg-color   #2f343f
 set $text-color          #f3f4f5
 set $inactive-text-color #676E7D
@@ -193,10 +193,10 @@ set $urgent-bg-color     #E53935
 
 # window colors
 #                       border              background         text                 indicator
-client.focused          $bg-color           $bg-color          $text-color          #00ff00
-client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
-client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
-client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
+client.focused          $bg-color           $bg-color          $text-color          #2f343f
+client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-color  #2f343f
+client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color  #2f343f
+client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #2f343f
 
 
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -243,7 +243,7 @@ bindsym $mod+Shift+s exec deepin-screenshot
 
 # run
 exec --no-startup-id compton -f
-exec_always --no-startup-id feh --bg-scale /home/zhanhao/Pictures/Wallpapers/1.jpg
+exec_always --no-startup-id python /home/zhanhao/.scripts/backimg.py
 #exec_always netease-cloud-music
 
 
@@ -255,4 +255,4 @@ for_window [instance="dropdown"] move scratchpad
 for_window [instance="dropdown"] border pixel 3
 # Runs the tmuxinit script, which searches for an earlier tmux instance,
 # otherwise starts a new one (to prevent multiple dropdown sessions).
-exec --no-startup-id $term --class dropdown -e tmuxinit
+exec --no-startup-id $term -n dropdown -e tmuxinit

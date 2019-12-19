@@ -10,16 +10,14 @@ esac
 vol=$(pamixer --get-volume)
 
 iconget() {
-    if [[ $vol -ge 80 ]]; then
+    if [[ $vol -ge 66 ]]; then
             icon=""
-    elif [[ $NUM -ge 75 ]]; then
-            icon=""
-    elif [[ $NUM -ge 50 ]]; then
-        icon=""
-    elif [[ $NUM -ge 15 ]]; then
-            icon=""
-    ee
-            icon=""
+    elif [[ $vol -ge 33 ]]; then
+            icon=""
+    elif [[ $vol -ge 0 ]]; then
+            icon=""
+    else
+            icon=""
     fi ;}
 
 iconget

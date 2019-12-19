@@ -12,7 +12,7 @@ command=i3battery
 interval=5
 
 [time]
-label=📅
+label= 
 command=echo $(date '+%Y-%b-%d (%a)  %I:%M %p')
 interval=30
 
