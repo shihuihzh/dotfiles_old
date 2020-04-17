@@ -32,8 +32,8 @@ font pango:DejaVu Sans Mono for Powerline
 floating_modifier $mod
 
 # start a terminal
-# set $term --no-startup-id alacritty
-set $term --no-startup-id st
+set $term --no-startup-id alacritty
+# set $term --no-startup-id st
 bindsym $mod+Return exec $term -e tmux
 bindsym $mod+u [instance="dropdown"] scratchpad show; [instance="dropdown"] move position center
 
@@ -255,4 +255,4 @@ for_window [instance="dropdown"] move scratchpad
 for_window [instance="dropdown"] border pixel 3
 # Runs the tmuxinit script, which searches for an earlier tmux instance,
 # otherwise starts a new one (to prevent multiple dropdown sessions).
-exec --no-startup-id $term -n dropdown -e tmuxinit
+exec --no-startup-id $term --class dropdown -t dropdown -e tmuxinit
