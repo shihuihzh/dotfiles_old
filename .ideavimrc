@@ -2,7 +2,8 @@ set ideajoin
 set surround
 set multiple-cursors
 set commentary
-set clipboard=unnamed
+"set clipboard=unnamed
+set clipboard+=ideaput
 set history=5000
 set number
 set hlsearch
@@ -11,7 +12,8 @@ set smartcase
 set gdefault
 set scrolloff=3
 set sidescrolloff=4
-
+" set keep-english-in-normal
+" set keep-english-in-normal-and-restore-in-insert
 
 let mapleader = ' '
 
@@ -73,6 +75,9 @@ nnoremap g<c-i> <c-i>
 nnoremap / :action Find<cr>
 " but preserve ideavim search
 nnoremap g/ /
+
+inoremap jj <ESC>
+inoremap kk <ESC>
 
 "----------------------------------------------------------------------
 " INSERT 模式下使用 EMACS 键位

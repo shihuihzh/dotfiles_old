@@ -8,7 +8,6 @@
 "======================================================================
 " vim: set ts=4 sw=4 tw=78 noet :
 
-
 "----------------------------------------------------------------------
 " 显示设置
 "----------------------------------------------------------------------
@@ -288,4 +287,5 @@ set guitablabel=%{Vim_NeatGuiTabLabel()}
 set guitabtooltip=%{Vim_NeatGuiTabTip()}
 
 
-
+hi! Normal ctermbg=NONE guibg=NONE 
+hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE 

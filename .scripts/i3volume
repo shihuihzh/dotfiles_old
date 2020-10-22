@@ -7,6 +7,13 @@ case $BLOCK_BUTTON in
 	5) pamixer -d 5 ;;
 esac
 
+case $BUTTON in
+	1) $TERMINAL -e pulsemixer & disown ;;
+	3) pamixer -t ;;
+	4) pamixer -i 5 ;;
+	5) pamixer -d 5 ;;
+esac
+
 vol=$(pamixer --get-volume)
 
 iconget() {
@@ -20,11 +27,12 @@ iconget() {
             icon=""
     fi ;}
 
-iconget
+# iconget
+# icon="  "
+icon="😃"
 
 printpastatus() {
-   [[ $(pamixer --get-mute) = "true" ]] && echo -n  && exit
-   
-   echo ${icon}${vol}% ;
+   [[ $(pamixer --get-mute) = "true" ]] && echo "" && exit
+   echo "${icon} ${vol}%";
 }
 printpastatus

@@ -235,7 +235,7 @@ bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
-bindsym $mod+Shift+f exec firefox
+bindsym $mod+Shift+f exec firefox-developer-edition
 bindsym $mod+Shift+g exec chrome
 bindsym $mod+shift+x exec i3lock
 bindsym $mod+d exec rofi -combi-modi window#drun#ssh -show combi -modi combi -lines 3 -eh 1 -width 100 -padding 800 -opacity "85"

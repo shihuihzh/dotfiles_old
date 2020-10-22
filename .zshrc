@@ -60,6 +60,10 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  archlinux
+  docker
+  docker-compose
+  sudo
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -99,4 +103,6 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias ra='ranger'
 alias tailf="tail -f"
 alias lt="ls -lth"
-
+alias vim="nvim"
+alias vi="nvim"
+alias gd="cd ~/DEV/Git"
