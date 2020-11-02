@@ -31,7 +31,7 @@ export GOPATH=$HOME/DEV/go
 export M2_HOME=$HOME/DEV/Soft/apache-maven-3.5.3
 export JAVA_HOME=$HOME/DEV/Soft/Java/jdk-11.0.2
 export JDK_HOME=$JAVA_HOME
-export PATH=$PATH:$HOME/.scripts:$M2_HOME/bin
+export PATH=$JAVA_HOME/bin:$PATH:$HOME/.scripts:$M2_HOME/bin
 
 #export MOZ_GTK_TITLEBAR_DECORATION=system
 # export GTK_IM_MODULE=ibus
@@ -48,4 +48,6 @@ fcitx-autostart &
 /usr/bin/kdeconnect-indicator &
 /usr/bin/blueman-tray &
 
-
+# NVM for nodejs
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm

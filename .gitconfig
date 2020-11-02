@@ -6,3 +6,6 @@
 [http]
 [core]
 	autocrlf = input
+	excludesfile = /home/zhanhao/.gitignore
+[pull]
+	rebase = false
