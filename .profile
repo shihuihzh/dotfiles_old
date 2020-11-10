@@ -34,17 +34,17 @@ export JDK_HOME=$JAVA_HOME
 export PATH=$JAVA_HOME/bin:$PATH:$HOME/.scripts:$M2_HOME/bin
 
 #export MOZ_GTK_TITLEBAR_DECORATION=system
-# export GTK_IM_MODULE=ibus
-# export XMODIFIERS=@im=ibus
-# export QT_IM_MODULE=ibus
-export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
-export XMODIFIERS="@im=fcitx"
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=ibus
+# export GTK_IM_MODULE=fcitx
+# export QT_IM_MODULE=fcitx
+# export XMODIFIERS="@im=fcitx"
 export TERMINAL=alacritty
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# ibus-daemon -drx
-fcitx-autostart &
+ibus-daemon -drx
+# fcitx-autostart &
 /usr/bin/kdeconnect-indicator &
 /usr/bin/blueman-tray &
 
